@@ -1,9 +1,9 @@
 body{
-  background: #E8E8E8;
+  background: #2e2e32;
   font-family: 'Oswald', sans-serif;
 }
 .App{
   width:90%;
   margin: 0 auto;
-  border: 1px solid #333;
+
 }

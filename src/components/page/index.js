@@ -11,15 +11,14 @@ import Navbar from '../Navbar';
 const Page = (props) => {
   return(
     <div>
-<Card>
-    <div style={{padding : '50px 0'}}>
-    <Logo/>
+     <Card>
+        <div style={{padding : '50px 0'}}>
+         <Logo/>
+       </div>
+         <Navbar/>
+     </Card>
     </div>
-    <Navbar/>
-</Card>
-    </div>
-   )
-
+   ) 
  }
 
 export default Page

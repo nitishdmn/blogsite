@@ -1,14 +1,12 @@
 import React ,{useState} from 'react';
 import './style.css';
+import { NavLink } from 'react-router-dom';
 /**
 * @author
 * @function Navbar
 **/
-
 const Navbar = (props) => {
-
     const [search , setSearch] = useState(false);
-
     const submitSearch = (e) =>
     {
         e.preventDefault();
@@ -17,16 +15,14 @@ const Navbar = (props) => {
     const openSearch = ()=>{
          setSearch(true);
     }
-
     const searchClass = search ?'searchInput active':'searchInput';
-
   return(
     <div className="navbar">
         <ul className="navbarMenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">AboutUs</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">ContactUs</a></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about-us">AboutUs</NavLink></li>
+            <li><NavLink to="/posts">Posts</NavLink></li>
+            <li><NavLink to="/contact-us">ContactUs</NavLink></li>
         </ul>
         <div className="search">
             <form onSubmit={submitSearch}>
@@ -36,8 +32,6 @@ const Navbar = (props) => {
         </div>
     </div>
    )
-
-
  }
 
 export default Navbar
